@@ -25,6 +25,9 @@ body {
 .page-section {
   background-color: #fff;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .page-section:nth-of-type(even) {
