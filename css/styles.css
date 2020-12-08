@@ -66,3 +66,9 @@ body {
 .page-section__image {
   width: 100%;
 }
+
+@media (min-width: 576px) {
+  .page-section__container {
+    max-width: 54rem;
+  }
+}
