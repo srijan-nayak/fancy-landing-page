@@ -72,3 +72,9 @@ body {
     max-width: 54rem;
   }
 }
+
+@media (min-width: 768px) {
+  .page-section__container {
+    max-width: 72rem;
+  }
+}
