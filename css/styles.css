@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .nav-bar {
@@ -32,23 +32,50 @@ body {
 }
 
 .nav-bar__title {
+  color: #2e282a;
   font-size: 3.6rem;
   text-transform: uppercase;
   line-height: 1em;
 }
 
 .nav-bar__hamburger {
-  height: 2.8rem;
+  border: solid 1px #ccc;
+  border-radius: 0.3em;
   cursor: pointer;
+  height: 3.6rem;
+  padding: 0.5rem;
+}
+
+.nav-bar__hamburger--active {
+  border-color: #2e282a;
 }
 
 .nav-bar__links {
   display: none;
 }
 
+.nav-bar__links ul {
+  list-style: none;
+}
+
+.nav-bar__links a {
+  color: #2e282a;
+  font-size: 2.4rem;
+  text-decoration: none;
+}
+
+.nav-bar__links li:not(:last-child) {
+  border-bottom: solid 1px #ddd;
+}
+
+.nav-bar__links--expanded {
+  display: block;
+  margin-top: 1rem;
+}
+
 #main-heading {
   color: #43c59e;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-size: 7.2rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -76,7 +103,7 @@ body {
 
 .page-section__heading {
   color: #3d7068;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-size: 5.4rem;
   font-weight: 700;
   line-height: 1em;
