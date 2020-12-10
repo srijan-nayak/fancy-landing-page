@@ -130,18 +130,46 @@ body {
 }
 
 @media (min-width: 576px) {
+  .nav-bar__container,
   .page-section__container {
     max-width: 54rem;
   }
 }
 
 @media (min-width: 768px) {
+  .nav-bar__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 72rem;
+  }
+
+  .nav-bar__links {
+    display: block;
+  }
+
+  .nav-bar__links ul {
+    display: flex;
+  }
+
+  .nav-bar__links li:not(:last-child) {
+    border-bottom: none;
+    margin-right: 2rem;
+  }
+
+  .nav-bar__hamburger {
+    display: none;
+  }
+
   .page-section__container {
     max-width: 72rem;
   }
 }
 
 @media (min-width: 992px) {
+  .nav-bar__container {
+    max-width: 96rem;
+  }
+
   .page-section__container {
     max-width: 96rem;
     display: grid;
@@ -162,6 +190,7 @@ body {
 }
 
 @media (min-width: 1200px) {
+  .nav-bar__container,
   .page-section__container {
     max-width: 114rem;
   }
