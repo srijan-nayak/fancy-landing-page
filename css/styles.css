@@ -12,6 +12,40 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.nav-bar {
+  background-color: #fff;
+  border-bottom: solid 1px #ccc;
+  padding: 1.6rem 0;
+  position: sticky;
+  top: 0;
+}
+
+.nav-bar__container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-bar__mobile-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar__title {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+.nav-bar__hamburger {
+  height: 2.8rem;
+  cursor: pointer;
+}
+
+.nav-bar__links {
+  display: none;
+}
+
 #main-heading {
   color: #43c59e;
   font-family: 'Roboto Slab', serif;
