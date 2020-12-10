@@ -44,6 +44,7 @@ body {
   cursor: pointer;
   height: 3.6rem;
   padding: 0.5rem;
+  transition: border-color 0.1s ease-out;
 }
 
 .nav-bar__hamburger--active {
