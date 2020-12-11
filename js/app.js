@@ -13,7 +13,7 @@ navbarExpandButton.addEventListener("click", () => {
 // construct nav links list dynamically
 // ------------------------------------
 const pageSections = document.querySelectorAll(".page-section");
-const navList = document.querySelector(".nav-bar__links ul");
+const navList = document.createElement("ul");
 
 pageSections.forEach((section) => {
   const navListItem = document.createElement("li");
@@ -24,3 +24,5 @@ pageSections.forEach((section) => {
   navListItem.appendChild(navLink);
   navList.appendChild(navListItem);
 });
+
+navbarLinks.appendChild(navList);
