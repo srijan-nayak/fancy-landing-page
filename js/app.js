@@ -1,3 +1,6 @@
+// ----------------------------------------
+// make the hamburger icon toggle nav links
+// ----------------------------------------
 const navbarExpandButton = document.querySelector(".nav-bar__hamburger");
 const navbarLinks = document.querySelector(".nav-bar__links");
 
