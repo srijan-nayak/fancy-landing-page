@@ -10,6 +10,7 @@ pageSections.forEach((section) => {
 
   navLink.href = `#${section.id}`;
   navLink.textContent = section.dataset.sectionName;
+  navLink.classList.add("nav-bar__link");
   navListItem.appendChild(navLink);
   navList.appendChild(navListItem);
 });
@@ -25,4 +26,13 @@ const navbarExpandButton = document.querySelector(".nav-bar__hamburger");
 navbarExpandButton.addEventListener("click", () => {
   navbarExpandButton.classList.toggle("nav-bar__hamburger--active");
   navbarLinks.classList.toggle("nav-bar__links--expanded");
+});
+
+// -----------------------------------------------
+// collapse expanded navbar when a link is clicked
+// -----------------------------------------------
+navbarLinks.addEventListener("click", (e) => {
+  if (e.target.classList.contains("nav-bar__link")) {
+    navbarLinks.classList.remove("nav-bar__links--expanded");
+  }
 });
