@@ -1,14 +1,3 @@
-// ----------------------------------------
-// make the hamburger icon toggle nav links
-// ----------------------------------------
-const navbarExpandButton = document.querySelector(".nav-bar__hamburger");
-const navbarLinks = document.querySelector(".nav-bar__links");
-
-navbarExpandButton.addEventListener("click", () => {
-  navbarExpandButton.classList.toggle("nav-bar__hamburger--active");
-  navbarLinks.classList.toggle("nav-bar__links--expanded");
-});
-
 // ------------------------------------
 // construct nav links list dynamically
 // ------------------------------------
@@ -25,4 +14,15 @@ pageSections.forEach((section) => {
   navList.appendChild(navListItem);
 });
 
+const navbarLinks = document.querySelector(".nav-bar__links");
 navbarLinks.appendChild(navList);
+
+// ----------------------------------------
+// make the hamburger icon toggle nav links
+// ----------------------------------------
+const navbarExpandButton = document.querySelector(".nav-bar__hamburger");
+
+navbarExpandButton.addEventListener("click", () => {
+  navbarExpandButton.classList.toggle("nav-bar__hamburger--active");
+  navbarLinks.classList.toggle("nav-bar__links--expanded");
+});
