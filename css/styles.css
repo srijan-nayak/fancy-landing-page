@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -90,6 +91,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-margin-top: 6.9rem;
 }
 
 .page-section:nth-of-type(even) {
