@@ -9,3 +9,5 @@ An example responsive landing page with smooth scrolling.
 - Expandable navbar on mobile
 - Animated section headings and content opacity to indicate active section
 - Active nav link state
+
+![screenshot](screenshots/desktop-screenshot.png)
