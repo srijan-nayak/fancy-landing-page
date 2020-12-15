@@ -15,6 +15,10 @@ pageSections.forEach((section) => {
   navList.appendChild(navListItem);
 });
 
+// make the first nav link the default active link
+const firstNavLink = navList.childNodes[0].childNodes[0];
+firstNavLink.classList.add("nav-bar__link--active");
+
 const navbarLinks = document.querySelector(".nav-bar__links");
 navbarLinks.appendChild(navList);
 
@@ -38,20 +42,23 @@ navbarLinks.addEventListener("click", (e) => {
   }
 });
 
-// --------------------------------------------------
-// toggle active state for a section when in viewport
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
+// toggle active state for a section and corresponding nav link when in viewport
+// -----------------------------------------------------------------------------
 document.addEventListener("scroll", () => {
   setTimeout(() => {
     const windowMidPoint = window.innerHeight / 2;
     pageSections.forEach((section) => {
       const sectionTop = section.getBoundingClientRect().top;
       const sectionBottom = section.getBoundingClientRect().bottom;
+      const sectionNavLink = document.querySelector(`a[href="#${section.id}"]`);
       // check if section is taking up the major area in viewport
       if (sectionTop < windowMidPoint && sectionBottom >= windowMidPoint) {
         section.classList.add("page-section--active");
+        sectionNavLink.classList.add("nav-bar__link--active");
       } else {
         section.classList.remove("page-section--active");
+        sectionNavLink.classList.remove("nav-bar__link--active");
       }
     });
   }, 300);
